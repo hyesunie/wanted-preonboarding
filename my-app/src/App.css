@@ -1,0 +1,253 @@
+.App {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+button {
+  background: inherit;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  overflow: visible;
+  cursor: pointer;
+}
+
+.header-container {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 12rem;
+  padding-right: 12rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.nav__menu {
+  display: flex;
+  height: 100%;
+  list-style: none;
+  align-items: center;
+
+  padding: 0;
+  margin: 0;
+  /* justify-content: space-between; */
+}
+.nav__menu li {
+  padding: 14px 15px;
+  color: #bac3d4;
+}
+
+.nav__menu li:hover {
+  border-bottom: solid;
+  border-bottom-color: #258bf7;
+}
+
+.overlay-container {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: white;
+  font-size: 0.8rem;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  display: none;
+  padding-top: 2rem;
+  transition: top 0.5s ease-in-out;
+}
+.overlay-container div {
+  padding: 1rem;
+  width: 12%;
+}
+.overlay-container div a {
+  display: flex;
+  padding: 0.4rem;
+  justify-content: space-between;
+  color: #9ba0aa;
+}
+
+.overlay-container div a:first-of-type {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #575a5f;
+}
+
+.overlay-container div:last-child a {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #575a5f;
+}
+
+.nav__search:hover .overlay-container {
+  display: flex;
+}
+
+.logo-container {
+  display: flex;
+  height: 35px;
+
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  padding-left: 1rem;
+}
+
+.side-container {
+  height: 50px;
+}
+
+.side-container ul li button img {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+.side__menu {
+  display: flex;
+  height: 50px;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.side__menu li {
+  padding: 0.8rem 0.8rem;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.icon {
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+.side__service {
+  /* font-weight: normal; */
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  width: 100%;
+  border: 0.16rem #c1cbd8 solid;
+  border-radius: 30px;
+  margin-left: 1rem;
+}
+.side__service a {
+  color: #8b929b;
+  font-size: 0.9rem;
+}
+
+.side__menu li:last-child::before {
+  content: "|";
+  color: #c1cbd8;
+}
+
+section {
+  height: 100vh;
+  width: inherit;
+  background-color: #232d3a;
+  color: white;
+  text-align: center;
+  justify-content: center;
+}
+
+.presentation {
+  display: none;
+}
+
+.toggle-side-bar {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  background-color: white;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+  left: 100%;
+  /* for sidebar to stay on top */
+  z-index: 1;
+  transition: left 0.5s ease-in-out;
+}
+
+@media (min-width: 1090px) and (max-width: 1286px) {
+  html {
+    font-size: 14px;
+  }
+  .nav-container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1090px) {
+  html {
+    font-size: 13px;
+  }
+
+  .profile-icon,
+  .service-icon {
+    display: none;
+  }
+  .nav-container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  /* .side__menu:first-child {
+    display: inline-block;
+  } */
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  .nav-container {
+    padding: 1rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .nav__menu {
+    width: 80%;
+    height: 3rem;
+    margin-left: 0.5rem;
+  }
+
+  .logo-container a {
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    margin-top: 1rem;
+    width: 100%;
+    align-items: start;
+  }
+  .header-container {
+    height: 105px;
+  }
+  .side__menu {
+    position: relative;
+    top: 4rem;
+  }
+
+  .nav__search:hover .overlay-container {
+    display: none;
+  }
+  .none {
+    display: none;
+  }
+  .presentation {
+    display: inherit;
+  }
+}
